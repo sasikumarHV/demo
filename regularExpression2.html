@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>regular expression</title>
+    <script type="text/javascript">
+        function validate()
+        {
+            var username=document.getElementById("uname").value;
+            //regx = new RegExp("E00","i");
+            var regx =/[a-g A-G]00/;
+            //var regx =/[^a-g]abc/;E
+            if(regx.test(username))
+            {
+                alert("valid username");
+            }
+            else{
+                alert("Invalid username");
+                document.getElementById("lb1user").style.visibility="visible";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form action="message.html">
+        <input id="uname" placeholder="Username" type="text"/><br>
+        <label id="lb1user" style="color:red;visibility:hidden">Invalid Username</label><br>
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+    
+</body>
+</html>
